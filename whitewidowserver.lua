@@ -1,8 +1,7 @@
---Dont change this unless using ESX
 local QBCore = exports['qb-core']:GetCoreObject()
 
 
--- White widow trim weed
+-- White widow trim weed events
 RegisterServerEvent('case-whitewidowjob:server:TrimWeed', function(args) 
 	local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -161,7 +160,7 @@ RegisterServerEvent('case-whitewidowjob:server:TrimWeed', function(args)
         end
     end
 end)
--- White widow roll joints
+-- White widow roll joints function and events
 RegisterServerEvent('case-whitewidowjob:server:RollJoints', function(args) 
 	local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -421,14 +420,14 @@ AddEventHandler('case-whitewidowjob:server:SpawnVehicle', function()
 			TriggerClientEvent('QBCore:Notify', src, 'You need $'..Config.VehicleDeposit..' to take out a vehicle', "error")   
 		end
 end)
--- White widow return vehicle
+-- White widow return vehicle function
 RegisterServerEvent('case-whitewidowjob:server:DespawnVehicle')
 AddEventHandler('case-whitewidowjob:server:DespawnVehicle', function()
 		local src = source
     	local Player = QBCore.Functions.GetPlayer(src)
 		TriggerClientEvent('case-whitewidowjob:client:DespawnVehicle', src)
 end)
--- Use joints
+-- Use joints function 
 QBCore.Functions.CreateUseableItem("weed_skunk_cbd_joint", function(source, item)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -457,3 +456,4 @@ QBCore.Functions.CreateUseableItem("weed_ak47_cbd_joint", function(source, item)
         TriggerClientEvent("case-whitewidowjob:client:UseAK47Joint", source)
     end
 end)
+-- Feel free to add any other 'joints', 'bongs', 'rigs', etc 

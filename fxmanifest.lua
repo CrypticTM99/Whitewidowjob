@@ -1,21 +1,20 @@
 fx_version 'cerulean'
-
 game 'gta5'
 
-author 'case#2506'
+author 'crypticwisdom99'
+description 'cryptic-whitewidowjob'
+version '1.0.0'
 
-description 'case-whitewidowjob'
-
-version '0.1'
+lua54 'yes'
 
 shared_scripts {
     'config.lua',
 }
 
-client_scripts{
+client_scripts {
     'client/*.lua',
 }
 
-server_scripts{
+server_scripts {
     'server/*.lua',
 }
